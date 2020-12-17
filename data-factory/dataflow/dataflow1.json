@@ -1,0 +1,20 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "semesterData_analysis",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"script": "source(output(\n\t\tId as string,\n\t\tMSSubClass as string,\n\t\tMSZoning as string,\n\t\tLotFrontage as string,\n\t\tLotArea as string,\n\t\tStreet as string,\n\t\tAlley as string,\n\t\tLotShape as string,\n\t\tLandContour as string,\n\t\tUtilities as string,\n\t\tLotConfig as string,\n\t\tLandSlope as string,\n\t\tNeighborhood as string,\n\t\tCondition1 as string,\n\t\tCondition2 as string,\n\t\tBldgType as string,\n\t\tHouseStyle as string,\n\t\tOverallQual as string,\n\t\tOverallCond as string,\n\t\tYearBuilt as string,\n\t\tYearRemodAdd as string,\n\t\tRoofStyle as string,\n\t\tRoofMatl as string,\n\t\tExterior1st as string,\n\t\tExterior2nd as string,\n\t\tMasVnrType as string,\n\t\tMasVnrArea as string,\n\t\tExterQual as string,\n\t\tExterCond as string,\n\t\tFoundation as string,\n\t\tBsmtQual as string,\n\t\tBsmtCond as string,\n\t\tBsmtExposure as string,\n\t\tBsmtFinType1 as string,\n\t\tBsmtFinSF1 as string,\n\t\tBsmtFinType2 as string,\n\t\tBsmtFinSF2 as string,\n\t\tBsmtUnfSF as string,\n\t\tTotalBsmtSF as string,\n\t\tHeating as string,\n\t\tHeatingQC as string,\n\t\tCentralAir as string,\n\t\tElectrical as string,\n\t\t{1stFlrSF} as string,\n\t\t{2ndFlrSF} as string,\n\t\tLowQualFinSF as string,\n\t\tGrLivArea as string,\n\t\tBsmtFullBath as string,\n\t\tBsmtHalfBath as string,\n\t\tFullBath as string,\n\t\tHalfBath as string,\n\t\tBedroomAbvGr as string,\n\t\tKitchenAbvGr as string,\n\t\tKitchenQual as string,\n\t\tTotRmsAbvGrd as string,\n\t\tFunctional as string,\n\t\tFireplaces as string,\n\t\tFireplaceQu as string,\n\t\tGarageType as string,\n\t\tGarageYrBlt as string,\n\t\tGarageFinish as string,\n\t\tGarageCars as string,\n\t\tGarageArea as string,\n\t\tGarageQual as string,\n\t\tGarageCond as string,\n\t\tPavedDrive as string,\n\t\tWoodDeckSF as string,\n\t\tOpenPorchSF as string,\n\t\tEnclosedPorch as string,\n\t\t{3SsnPorch} as string,\n\t\tScreenPorch as string,\n\t\tPoolArea as string,\n\t\tPoolQC as string,\n\t\tFence as string,\n\t\tMiscFeature as string,\n\t\tMiscVal as string,\n\t\tMoSold as string,\n\t\tYrSold as string,\n\t\tSaleType as string,\n\t\tSaleCondition as string,\n\t\tprice as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tlimit: 100,\n\tinferDriftedColumnTypes: true) ~> source1"
+		}
+	}
+}
